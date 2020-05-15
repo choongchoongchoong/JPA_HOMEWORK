@@ -41,6 +41,8 @@ public class WbsTestDaoImpl implements WbsTestDao {
 	}
 
 	public List<WorkPlaceInfo> findWorkPlaceInfo(String u_no) {
+		System.out.println("param " + u_no);
+		// 파라메터 전달되고 있지 않음
 
 		EntityManager em = conn.getConnection();
 

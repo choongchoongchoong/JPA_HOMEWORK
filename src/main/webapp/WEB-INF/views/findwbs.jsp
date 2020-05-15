@@ -13,7 +13,7 @@
 
 <form action = "findwbs">
 	ID : <br>
-	<input type = "text" name = "id" required = "required"><br>
+	<input type = "text" name = "u_no" required = "required"><br>
 	<input type = "submit" value = "확인">
 </form>
 

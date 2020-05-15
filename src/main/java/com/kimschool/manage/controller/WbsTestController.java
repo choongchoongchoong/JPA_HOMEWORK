@@ -39,6 +39,7 @@ public class WbsTestController {
 		List<Wbs_2020> wbsYear = service.resultWbsYear(u_no);
 		List<WorkPlaceInfo> workPlaceInfo = service.resultWorkPlaceInfo(u_no);
 
+
 		if (wbsUserInfo.size() == 0) {
 			mv.setViewName("redirect:/");
 			mv.addObject("msg", "내용을 확인해주세요");

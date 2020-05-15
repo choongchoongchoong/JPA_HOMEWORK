@@ -10,35 +10,55 @@
 <body>
 <h1>
 	근태관리 시스템
-	<c:forEach items="${listWbsUserInfo }" var = "UserInfo">
-		${UserInfo.name }
-	</c:forEach>
 </h1>
 
-<table border = "1">
+<table border = "1" style = text-alighn:center>
 	<tr>
+		<th>사원명</th><th>근무처</th>
+	</tr>
+	<tr>
+		<td colpan = "3">
+			<c:forEach items="${wbsUserInfo }" var = "UserInfo">
+				${UserInfo.name }
+			</c:forEach>
+		</td>
+		<td colpan = "3">
+			<c:forEach items="${workPlaceInfo }" var = "WorkPlaceInfo">
+				${WorkPlaceInfo.wp_name }
+			</c:forEach>
+		</td>
 	</tr>
 </table>
 
-<table border = "1">
+<br><br>
+
+<table border = "1"  style = text-alighn:center>
+	<c:forEach items="${workPlaceInfo }" var = "WorkPlaceInfo">
+	<tr style = "background-color: lightblue">
+		<th>최소근무시간</th>
+		<th>최대근무시간</th>
+	</tr>
 	<tr>
-	<c:forEach items="${listWorkPlaceInfo }" var = "WorkPlaceInfo">
 		<td>${WorkPlaceInfo.min_time }시간</td>
 		<td>${WorkPlaceInfo.max_time }시간</td>
-	</c:forEach>
 	</tr>
+	</c:forEach>
 </table>
 
-<table border = "1">
+<br><br>
+
+<table border = "1" style = text-alighn:center>
+	<tr style = "background-color: lightblue">
+		<th>출근</th><th>퇴근</th><th>근무</th><th>비고</th>
+	</tr>
+		<c:forEach items="${wbsYear }" var = "WbsYear">
 	<tr>
-		<c:forEach items="${listWbsYear }" var = "WbsYear">
-		<td colspan = "3"></td>
 		<td>${WbsYear.start_time }</td>
 		<td>${WbsYear.end_time }</td>
 		<td>${WbsYear.vacation_type }</td>
 		<td>${WbsYear.memo }</td>
-		</c:forEach>
 	</tr>
+		</c:forEach>
 </table>
 
 </body>
