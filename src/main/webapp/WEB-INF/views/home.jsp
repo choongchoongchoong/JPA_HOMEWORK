@@ -21,6 +21,7 @@
 
 <a href = "movereguser">Don't you have Account?</a><br>
 <a href = "movefindpassword">Forgot Your Password?</a><br>
+<a href = "movefindwbs">근태관리 검색</a><br>
 
 </body>
 </html>
