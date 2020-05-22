@@ -11,14 +11,15 @@ import javax.persistence.Table;
 @Table (name = "wbs_userinfo")
 @NamedQueries({
 @NamedQuery
-		(name = "Wbs_UserInfo.findByUno",
-		query = "select u from Wbs_UserInfo u where u.u_no = :u_no")
+		(name = "Wbs_UserInfo.findByWbsUserInfo",
+		query = "select u from Wbs_UserInfo u where u.u_no = :u_no and u.u_password = :u_password")
 })
 public class Wbs_UserInfo {
 
 	@Id
 	private int no;
 	private String u_no;
+	private String u_password;
 	private String name;
 	private String gender;
 	private String address;
@@ -42,6 +43,12 @@ public class Wbs_UserInfo {
 	}
 	public void setU_no(String u_no) {
 		this.u_no = u_no;
+	}
+	public String getU_password() {
+		return u_password;
+	}
+	public void setU_password(String u_password) {
+		this.u_password = u_password;
 	}
 	public String getName() {
 		return name;
@@ -99,9 +106,10 @@ public class Wbs_UserInfo {
 	}
 	@Override
 	public String toString() {
-		return "Wbs_UserInfo [no=" + no + ", u_no=" + u_no + ", name=" + name + ", gender=" + gender + ", address="
-				+ address + ", mobile_number=" + mobile_number + ", birth_day=" + birth_day + ", hire_date=" + hire_date
-				+ ", reg_date=" + reg_date + ", upd_date=" + upd_date + ", upd_user=" + upd_user + "]";
+		return "Wbs_UserInfo [no=" + no + ", u_no=" + u_no + ", u_password=" + u_password + ", name=" + name
+				+ ", gender=" + gender + ", address=" + address + ", mobile_number=" + mobile_number + ", birth_day="
+				+ birth_day + ", hire_date=" + hire_date + ", reg_date=" + reg_date + ", upd_date=" + upd_date
+				+ ", upd_user=" + upd_user + "]";
 	}
 
 }

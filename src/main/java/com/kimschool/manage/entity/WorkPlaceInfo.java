@@ -21,9 +21,9 @@ public class WorkPlaceInfo {
 	private String u_no;
 	private String wp_name;
 	@Column (insertable = false)
-	private String min_time;
+	private int min_time;
 	@Column (insertable = false)
-	private String max_time;
+	private int max_time;
 	private String reg_date;
 
 	public int getNo() {
@@ -44,16 +44,16 @@ public class WorkPlaceInfo {
 	public void setWp_name(String wp_name) {
 		this.wp_name = wp_name;
 	}
-	public String getMin_time() {
+	public int getMin_time() {
 		return min_time;
 	}
-	public void setMin_time(String min_time) {
+	public void setMin_time(int min_time) {
 		this.min_time = min_time;
 	}
-	public String getMax_time() {
+	public int getMax_time() {
 		return max_time;
 	}
-	public void setMax_time(String max_time) {
+	public void setMax_time(int max_time) {
 		this.max_time = max_time;
 	}
 	public String getReg_date() {

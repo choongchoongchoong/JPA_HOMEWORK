@@ -13,7 +13,7 @@
 </h1>
 
 <table border = "1" style = text-alighn:center>
-	<tr>
+	<tr style = "background-color: lightblue">
 		<th>사원명</th><th>근무처</th>
 	</tr>
 	<tr>
