@@ -30,26 +30,40 @@ public class WbsDaoImpl implements WbsDao {
 		return result;
 	}
 
-	public List<Wbs_2020> findWbsYear(String u_no) {
+	@Override
+	public List<Wbs_UserInfo> getWbsUserInfo(String u_no) {
 
 		EntityManager em = conn.getConnection();
 
-		List<Wbs_2020> wbsYear = em.createNamedQuery("Wbs_2020.findByYear", Wbs_2020.class)
+		List<Wbs_UserInfo> result = em.createNamedQuery("Wbs_UserInfo.findByu_no", Wbs_UserInfo.class)
 				.setParameter("u_no", u_no)
 				.getResultList();
 
-		return wbsYear;
+		return result;
 	}
 
-	public List<WorkPlaceInfo> findWorkPlaceInfo(String u_no) {
+	@Override
+	public List<Wbs_2020> getWbs2020(String u_no) {
 
 		EntityManager em = conn.getConnection();
 
-		List<WorkPlaceInfo> workPlaceInfo = em.createNamedQuery("WorkPlaceInfo.findByWP", WorkPlaceInfo.class)
+		List<Wbs_2020> result = em.createNamedQuery("Wbs_2020.findByu_no", Wbs_2020.class)
 				.setParameter("u_no", u_no)
 				.getResultList();
 
-		return workPlaceInfo;
+		return result;
+	}
+
+	@Override
+	public List<WorkPlaceInfo> getWorkPlaceInfo(String u_no) {
+
+		EntityManager em = conn.getConnection();
+
+		List<WorkPlaceInfo> result = em.createNamedQuery("WorkPlaceInfo.findByu_no", WorkPlaceInfo.class)
+				.setParameter("u_no", u_no)
+				.getResultList();
+
+		return result;
 	}
 
 }

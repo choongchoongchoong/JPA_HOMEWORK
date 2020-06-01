@@ -31,12 +31,13 @@ public class WbsController {
 		return mv;
 	}
 
-	@RequestMapping("/getWbsInfo")
-	public ModelAndView wbsVoCheck(String u_no, String u_password) {
+	@RequestMapping("getwbsinfo")
+	public ModelAndView getwbsinfo(String u_no) {
 
-		ModelAndView mv = wbsservice.wbsVoCheck(u_no, u_password);
+		ModelAndView mv = wbsservice.getwbsinfo(u_no);
 
 		return mv;
 	}
+
 
 }
